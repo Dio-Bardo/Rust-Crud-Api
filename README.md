@@ -46,7 +46,7 @@ Siga estos pasos para ejecutar la aplicación:
 1. Clona este repositorio en tu máquina local:
 
    ```shell
-   git clone https://github.com/Asphyxiae/rust-crud-api.git
+   git clone https://github.com/Dio-Bardo/Rust-Crud-Api.git
    ```
 2. Crea un archivo .env en el directorio raíz del proyecto y define la variable de entorno DATABASE_URL con la URL de conexión a tu base de datos PostgreSQL:
    ```shell
