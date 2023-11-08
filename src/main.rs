@@ -88,7 +88,7 @@ fn handle_post_request(request: &str) -> (String, String) {
                 )
                 .unwrap();
 
-            (OK_RESPONSE.to_string(), "User created".to_string())
+            (OK_RESPONSE.to_string(), "Usuario creado".to_string())
         }
         _ => (INTERNAL_SERVER_ERROR.to_string(), "Error".to_string()),
     }
@@ -109,7 +109,7 @@ fn handle_get_request(request: &str) -> (String, String) {
 
                     (OK_RESPONSE.to_string(), serde_json::to_string(&user).unwrap())
                 }
-                _ => (NOT_FOUND.to_string(), "User not found".to_string()),
+                _ => (NOT_FOUND.to_string(), "usuario no encontrado".to_string()),
             }
 
         _ => (INTERNAL_SERVER_ERROR.to_string(), "Error".to_string()),
@@ -154,7 +154,7 @@ fn handle_put_request(request: &str) -> (String, String) {
                 )
                 .unwrap();
 
-            (OK_RESPONSE.to_string(), "User updated".to_string())
+            (OK_RESPONSE.to_string(), "actualizacion completada".to_string())
         }
         _ => (INTERNAL_SERVER_ERROR.to_string(), "Error".to_string()),
     }
@@ -167,10 +167,10 @@ fn handle_delete_request(request: &str) -> (String, String) {
             let rows_affected = client.execute("DELETE FROM users WHERE id = $1", &[&id]).unwrap();
 
             if rows_affected == 0 {
-                return (NOT_FOUND.to_string(), "User not found".to_string());
+                return (NOT_FOUND.to_string(), "usuario no encontrado".to_string());
             }
 
-            (OK_RESPONSE.to_string(), "User deleted".to_string())
+            (OK_RESPONSE.to_string(), "usuario borrado".to_string())
         }
         _ => (INTERNAL_SERVER_ERROR.to_string(), "Error".to_string()),
     }
