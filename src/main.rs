@@ -7,7 +7,7 @@ use std::env;
 #[macro_use]
 extern crate serde_derive;
 
-//Model: USer struct with id, name, email
+//Model: USer struct 
 #[derive(Serialize, Deserialize)]
 struct User {
     id: Option<i32>,
