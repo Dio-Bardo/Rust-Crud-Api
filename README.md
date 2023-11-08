@@ -57,4 +57,4 @@ Siga estos pasos para ejecutar la aplicación:
    docker-compose up
 4. Esto iniciará la aplicación y la base de datos PostgreSQL en contenedores separados.
 
-La aplicación estará disponible en http://localhost:8080.
+La aplicación estará disponible en http://localhost:8080/users.
